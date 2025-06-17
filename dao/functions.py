@@ -6,6 +6,11 @@ class InventarioDao:
             self.products = []
         else:
             self.products = inventario
+            
+    #def lookup(self, nombre_producto):
+        #for product in self.products:
+           # if p
+            
     
     def add(self, producto_nuevo):
         self.products.append(producto_nuevo)

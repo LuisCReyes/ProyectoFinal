@@ -1,7 +1,7 @@
 import models.classes as c
 import dao.functions as f
 
-productos = f.InventarioDao()
+productos = f.InventarioDao([])
 
 def menu():
     print("""
@@ -17,7 +17,7 @@ def main():
             if option == '1':
                 nombre = input("Nombre del producto: ")
                 precio = float(input("Precio sin descuento: "))
-                descuento = int(input("Descuento en entero y postivo: "))
+                descuento = int(input("Descuento en entero y positivo: "))
                 if descuento > 100 or descuento < 0:
                     print("Descuento inválido, debe ser un número no menor a 0 y no igual a 100")
                 existencia = int(input("Existencia: "))
@@ -29,7 +29,7 @@ def main():
                 productos.add(producto)
                 
             elif option == '2':
-                print("Prodcutos")
+                print("Productos")
                 productos.show()
             elif option == '6':
                 print("Ádios")
